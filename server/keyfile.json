@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "turtleopedia",
+  "private_key_id": "38d004ab02f65809a33e69067e8a0fd451c258cf",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC390+H0qRzeSRG\nIKUqBamyOdmTVXKhmOCt1QcTdKyIQcuerBQhuV1kJQkGHm8Y3MC20xFm3z6Sqpp5\nYfp6q772yweGcFq5DFBsYwarvZhzjlSpUyFYUBD2wIm888XoSWBQWS+wnEW6xv9M\nqDCxssF8PRe7oLqgKkBJSGgl7onNwBGTvWXVPrCKQ1nhEfZBV+Qh0qGyaO+eAjuX\nX7VqeywO3rN0z3St671rDXoDIxxBsOQPzSASubfbpp2UzcXKxjeqTdo0AlfCAUjt\n/OfYgj9PgAGZPDDgkvPGS1NsywYblGyaqPNOhbnH2MS3H883MUDDTfxjkBbZq6We\n4M3hwjItAgMBAAECggEAFSMbRjXTo1jl7BDQKVXhO5MeBqmotByGpDJ3z6p2MGmu\n5ZpL7dwIePswYD2a8jZbBiaWN0WrQNrNSOkTCIk3Nc/6G15Jbj2V9/4gxBbSr2RJ\nIfNlP2pjqJZSvR0dPiVAJbs5mYc7E8zNhJdGkQRC6u1yDqLXDpQMMt9Y6BLSToty\n7gV7eu52HKOoBTjSL6PnYhN/pGI9o3BXyG1QmvP1wcc4se5gnt8L13pGkyldC3Ui\nvSq4e+qm3TFeLgtDzT8EKg/tpGVJO4Ckn5O6GNN0R++XISK5Ug0U80gGx0wpKJqU\nGRyYWlRXB2zhc3R0KcqGHosOi9fnwPlwDomEImagwQKBgQDsA2o6aQezBx/PG9BS\nJNqWg4GzxobQ5lVJvmS5uHSDMUoKcjhtGwLskY0+oHBBDtAdcbfWlTlSNx/EJGwx\nERsh99FnavU4bwgS1mO8gorIGAR+blma0Vuhe07K1Kwmi3TnMQ4H7POqrtATMik7\n+IODeAtWdZTYfsHvAZZ1mixCtQKBgQDHi40eN7mSllI7ZBA6osaiefocGAQMcBPq\nRiR+KwmPLCY4gfm9NpV/gpmGMuaGcw8S1EsVLj/GildGQB+zCJUTE6W7ME263oC4\nbjYuGtOYSGrirOVbwvr54zF/2IwxeHhMYCFc+ATsfxjYrERxK9IeoEgeYraDv2/D\niMVBo+WEmQKBgQDXeqqzF4+jAZ8mHXPOe71i7EAwHdKayaEWyhD2i5U87nR2IyCn\nZKD/0kgN5Ld4foi+SUQaU3XZPWDwWHy7M639DmCOtlWbJ6xMXpcC1oDU/TClKiT/\nN6QcRBOFFjTyoCKkreHslIdHz4FD9Wk2Ssfv8VsQnhu+qcRwbZesWY2NfQKBgQC+\nPYSHp5brcxbo+mgijueTJXlW6WqKtRu3gbHu+3b8oZm6y+feBbkXvNpDQCnZSr63\nM+B1TAePcHruRdoy5N7DNjsOMGoa22Ca9LAA2qCakYgdnbp49nYyYPDjMv/Ndk4y\nen+0U9zV4AI/KFWEE8QaYLMBDRl2l7+lCrMM9oWuGQKBgBF3otf5FBJfNUo7ocoR\n0WBhddkeuyWghlZwr6PVwPjLKSAbQyjAGD/WrMHwxhLaBUmg/jjw0zScbbTuuaEO\nOV6P46r4eZUy57/+n+Lqbpfj7C+lwKXmaEKPvJSD550rHgjaXO2re4AXJGe9bbpd\ntklXmNHHuzNO21Oqjqv8BdN4\n-----END PRIVATE KEY-----\n",
+  "client_email": "turtleopedia-k8s@turtleopedia.iam.gserviceaccount.com",
+  "client_id": "102812417879180026207",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/turtleopedia-k8s%40turtleopedia.iam.gserviceaccount.com"
+}
