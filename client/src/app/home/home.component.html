@@ -1,0 +1,31 @@
+<h2>Task</h2>
+
+<div class="card-container">
+
+    <a class="card" routerLink="/newtask">
+        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+        </svg>
+
+        <span>Create new task!</span>
+
+        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+        </svg>
+    </a>
+
+</div>
+
+
+<div style=" margin-top: 50px;"><p>Your existing Tasks</p>
+</div>
+<div class="card-container" style="display: flow-root;">
+
+    <div class="card card-small" *ngFor="let message of messages; let i=index">
+
+        <p>To:- {{message.to}}, Status: {{message.status}}</p>
+        <button class="btn btn-info" style="margin: 10px" (click)="deleteTask(i)">Delete</button>
+    </div>
+</div>
+
+

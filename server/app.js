@@ -8,8 +8,8 @@ const {isCelebrate} = require('celebrate');
 const logger = require('./src/config/logger');
 const cors = require('cors');
 const util = require('util');
+const AppError = require('./src/errors/app');
 require('./src/config/db');
-require('./src/config/redis');
 
 const app = express();
 // configuring the application
@@ -68,6 +68,7 @@ const getErrorResponse = (httpStatus, message) => ({
   },
 });
 
+
 // error handler
 app.use((err, req, res, next) => {
   logger.error(err);
@@ -85,6 +86,13 @@ app.use((err, req, res, next) => {
         401,
         'Unauthorized. Missing or invalid token',
     ));
+  } else if (err instanceof AppError) {
+    // All HTTP requests must have a response,
+    // so let's send back an error with its httpStatus and message
+    res.send(getErrorResponse(
+        err.httpStatus,
+        err.message,
+    ));
   } else {
     // If it is an uncaught exception, pass it back as an Internal Server Error
     res.send(
@@ -95,5 +103,4 @@ app.use((err, req, res, next) => {
         ));
   }
 });
-
 module.exports = app;

@@ -1,9 +1,9 @@
-const auth = require('./auth');
+const main = require('./main');
 
 module.exports = () => {
   let routes = [];
 
-  routes = routes.concat(auth);
+  routes = routes.concat(main);
 
   routes.forEach((r) => {
     r.route = `/worker${r.route}`;

@@ -11,15 +11,7 @@ const {
   MONGO_URL_SUBSTRING,
 } = process.env;
 
-
-let url;
-if (process.env.NODE_ENV === 'local') {
-  url = `${MONGO_URL_SUBSTRING}://${MONGO_USERNAME}:${MONGO_PASSWORD}@${MONGO_HOSTNAME}:${MONGO_PORT}/${MONGO_DB_DELTA}?authSource=admin`;
-} else {
-  url = `${MONGO_URL_SUBSTRING}/${MONGO_DB_DELTA}`;
-}
-
-logger.info(url);
+const url = `${MONGO_URL_SUBSTRING}://${MONGO_USERNAME}:${MONGO_PASSWORD}@${MONGO_HOSTNAME}:${MONGO_PORT}/${MONGO_DB_DELTA}?authSource=admin`;
 
 const options = {
   useUnifiedTopology: true,
@@ -33,6 +25,5 @@ mongoose.connect(url, options)
     .catch((error) => {
       logger.error(util.inspect(error));
     });
-
 
 module.exports = mongoose;

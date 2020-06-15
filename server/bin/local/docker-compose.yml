@@ -1,6 +1,19 @@
 version: '3.7'
 
 services:
+  rabbitmq-server:
+    image: 'rabbitmq:latest'
+    container_name: rabbitmq-server
+    ports:
+      - "5672:5672"
+    volumes:
+      - rabbitmqdata:/data/rabbitmq
+    networks:
+      - app-network
+    environment:
+      - RABBITMQ_DEFAULT_USER=piyush
+      - RABBITMQ_DEFAULT_PASS=piyush
+
   db-server:
     container_name: db-server
     image: mongo:latest
@@ -22,19 +35,9 @@ services:
       retries: 5
       start_period: 40s
 
-  redis-server:
-    image: redis:latest
-    container_name: redis-server
-    ports:
-      - "6379:6379"
-    networks:
-      - app-network
-    volumes:
-      - redisdata:/data/redis
-
   elastic-server:
     container_name: elastic-server
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.0.1
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.7.1
     volumes:
       - esdata:/data/esdata
     environment:
@@ -45,6 +48,7 @@ services:
       driver: none
     ports:
       - "9300:9300"
+      - "9200:9200"
     networks:
       - app-network
 
@@ -67,8 +71,8 @@ services:
       - app-network
     links:
       - db-server
-      - redis-server
       - elastic-server
+      - rabbitmq-server
 
 networks:
   app-network:
@@ -76,6 +80,6 @@ networks:
 
 volumes:
   esdata:
-  redisdata:
+  rabbitmqdata:
   dbdata:
   node_modules:
